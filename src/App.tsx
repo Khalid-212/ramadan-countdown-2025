@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -7,6 +6,8 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { TranslationProvider } from "@/hooks/useTranslation";
+import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeToggle } from "@/components/theme-toggle";
 import Index from "./pages/Index";
 import Planner from "./pages/Planner";
 import Series from "./pages/Series";
@@ -24,75 +25,61 @@ const App = () => {
   useEffect(() => {
     supabase.auth.onAuthStateChange((event, session) => {
       setIsAuthenticated(!!session);
-      
-      // Check if user has admin role
+
       if (session?.user) {
-        // In a real application, you would check the user's role
-        // For simplicity, we'll use the user's email to determine admin status
-        // You should implement proper RBAC in a production app
-        setIsAdmin(true); // For development, everyone is an admin
+        setIsAdmin(true);
       } else {
         setIsAdmin(false);
       }
     });
 
-    // Check initial session
     supabase.auth.getSession().then(({ data: { session } }) => {
       setIsAuthenticated(!!session);
-      
-      // Same admin check as above
+
       if (session?.user) {
-        setIsAdmin(true); // For development, everyone is an admin
+        setIsAdmin(true);
       }
     });
   }, []);
 
-  // Show nothing while checking authentication
   if (isAuthenticated === null) {
     return null;
   }
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <TranslationProvider>
-          <Toaster />
-          <Sonner />
-          <BrowserRouter>
-            <Routes>
-              <Route
-                path="/"
-                // element={isAuthenticated ? <Index /> : <Navigate to="/auth" />}
-                element={<Index />}
-              />
-              <Route
-                path="/planner"
-                // element={isAuthenticated ? <Planner /> : <Navigate to="/auth" />}
-                element={<Planner />}
-              />
-              <Route
-                path="/series"
-                element={<Series />}
-              />
-              <Route
-                path="/series/:playlistId"
-                element={<SeriesDetail />}
-              />
-              <Route
-                path="/series-admin"
-                element={isAdmin ? <SeriesAdmin /> : <Navigate to="/series" />}
-              />
-              {/* <Route
-                path="/auth"
-                // element={!isAuthenticated ? <Auth /> : <Navigate to="/" />}
-                element={<Auth />}
-              /> */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </BrowserRouter>
-        </TranslationProvider>
-      </TooltipProvider>
-    </QueryClientProvider>
+    <ThemeProvider defaultTheme="system">
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <TranslationProvider>
+            <div className="min-h-screen bg-background transition-colors">
+              <div className="fixed top-4 right-4 z-50">
+                <ThemeToggle />
+              </div>
+              <Toaster />
+              <Sonner />
+              <BrowserRouter>
+                <Routes>
+                  <Route path="/" element={<Index />} />
+                  <Route path="/planner" element={<Planner />} />
+                  <Route path="/series" element={<Series />} />
+                  <Route
+                    path="/series/:playlistId"
+                    element={<SeriesDetail />}
+                  />
+                  <Route
+                    path="/series-admin"
+                    element={
+                      isAdmin ? <SeriesAdmin /> : <Navigate to="/series" />
+                    }
+                  />
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </BrowserRouter>
+            </div>
+          </TranslationProvider>
+        </TooltipProvider>
+      </QueryClientProvider>
+    </ThemeProvider>
   );
 };
 

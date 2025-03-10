@@ -9,7 +9,6 @@ A modern web application built with React and Vite to countdown to Ramadan 2025.
 - Dark/Light theme support
 - TypeScript for type safety
 - Supabase integration for backend services
-- Testing setup with Vitest
 
 ## 🛠️ Tech Stack
 
@@ -21,7 +20,6 @@ A modern web application built with React and Vite to countdown to Ramadan 2025.
 - **Language:** TypeScript
 - **State Management:** React Query
 - **Form Handling:** React Hook Form
-- **Testing:** Vitest
 - **Code Quality:** ESLint, Prettier
 
 ## 📋 Prerequisites
@@ -62,29 +60,12 @@ A modern web application built with React and Vite to countdown to Ramadan 2025.
    bun dev
    ```
 
-## 🧪 Testing
-
-We use Vitest for testing. Here are the available test commands:
-
-```bash
-# Run tests
-npm run test
-
-# Run tests with UI
-npm run test:ui
-
-# Generate test coverage
-npm run test:coverage
-```
-
 ## 📝 Available Scripts
 
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build
 - `npm run lint` - Lint code
-- `npm run format` - Format code with Prettier
-- `npm run format:check` - Check code formatting
 - `npm run supabase:generate-types` - Generate Supabase types
 
 ## 🤝 Contributing
@@ -94,11 +75,9 @@ We welcome contributions! Please follow these steps:
 1. Fork the repository
 2. Create a new branch: `git checkout -b feature/your-feature-name`
 3. Make your changes
-4. Run tests: `npm run test`
-5. Format code: `npm run format`
-6. Commit your changes: `git commit -m 'Add some feature'`
-7. Push to the branch: `git push origin feature/your-feature-name`
-8. Submit a pull request
+4. Commit your changes: `git commit -m 'Add some feature'`
+5. Push to the branch: `git push origin feature/your-feature-name`
+6. Submit a pull request
 
 ## 📁 Project Structure
 
@@ -110,7 +89,6 @@ src/<br/>
 │ ├── App.tsx # Main application component<br/>
 │ └── main.tsx # Application entry point<br/>
 ├── public/ # Static assets<br/>
-├── tests/ # Test files<br/>
 └── supabase/ # Supabase configuration<br/>
 
 ## 🔧 Configuration Files

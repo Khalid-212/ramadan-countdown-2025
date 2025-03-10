@@ -116,7 +116,7 @@ const Index = () => {
         <div className="absolute top-4 right-4">
           <button
             onClick={() => setLanguage(language === "en" ? "am" : "en")}
-            className="px-4 py-2 rounded-lg bg-white/80 backdrop-blur-sm border border-primary/10 hover:bg-white transition-colors"
+            className="px-4 mr-12 py-2 rounded-lg bg-white/80 backdrop-blur-sm border border-primary/10 hover:bg-white transition-colors dark:bg-black/80 dark:hover:bg-black"
           >
             {language === "en" ? "Amharic" : "English"}
           </button>
@@ -178,7 +178,7 @@ const Index = () => {
                 <Link to="/series">
                   <Button
                     variant="outline"
-                    className="bg-white/80 hover:bg-white shadow-sm"
+                    className="bg-white/80 hover:bg-white shadow-sm dark:bg-black/80 dark:hover:bg-black"
                   >
                     View All Islamic Series
                     <span className="ml-2">→</span>
@@ -198,7 +198,7 @@ const Index = () => {
         </div>
       </div>
 
-      <footer className="fixed bottom-0 left-0 right-0 p-4 text-center text-primary/80 bg-white/50 backdrop-blur-sm border-t border-primary/10">
+      <footer className="bottom-0 left-0 right-0 p-4 text-center text-primary/80 bg-white/50 backdrop-blur-sm border-t border-primary/10 dark:bg-black/50 dark:text-primary/80">
         <p className="text-sm">
           Made with ❤️ by Khalid Ibrahim. Remember me in your precious duas this
           Ramadan 🤲

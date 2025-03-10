@@ -1,4 +1,3 @@
-
 import { TimeLeft } from "@/types/ramadan";
 import { translations, Language } from "@/constants/translations";
 
@@ -7,7 +6,10 @@ interface RamadanCountdownProps {
   language: Language;
 }
 
-export const RamadanCountdown = ({ timeLeft, language }: RamadanCountdownProps) => {
+export const RamadanCountdown = ({
+  timeLeft,
+  language,
+}: RamadanCountdownProps) => {
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
       {[
@@ -23,17 +25,17 @@ export const RamadanCountdown = ({ timeLeft, language }: RamadanCountdownProps) 
             animation: `fadeInScale 0.5s ease-out ${index * 0.1}s backwards`,
           }}
         >
-          <div 
+          <div
             className="text-4xl md:text-5xl font-bold text-primary"
             style={{
-              animation: 'countUpFade 0.5s ease-out forwards',
+              animation: "countUpFade 0.5s ease-out forwards",
               animationDelay: `${index * 0.1}s`,
             }}
           >
             {String(item.value).padStart(2, "0")}
           </div>
           <div
-            className={`text-sm mt-2 text-primary/80 ${
+            className={`text-sm mt-2 text-primary/80  ${
               language === "am" ? "font-amharic" : ""
             } group-hover:text-primary transition-colors duration-300`}
           >
