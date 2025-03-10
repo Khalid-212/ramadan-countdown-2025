@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Share2 } from "lucide-react";
 import { toast } from "sonner";
@@ -165,7 +164,9 @@ const Index = () => {
           {/* Featured Playlists Section */}
           {featuredPlaylists.length > 0 && (
             <div className="mt-16">
-              <h2 className="text-2xl font-bold text-primary mb-6">Featured Islamic Series</h2>
+              <h2 className="text-2xl font-bold text-primary mb-6">
+                Featured Ramadan Series
+              </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {featuredPlaylists.map((playlist) => (
                   <div key={playlist.id} className="animate-fade-in">
@@ -175,7 +176,10 @@ const Index = () => {
               </div>
               <div className="mt-8">
                 <Link to="/series">
-                  <Button variant="outline" className="bg-white/80 hover:bg-white shadow-sm">
+                  <Button
+                    variant="outline"
+                    className="bg-white/80 hover:bg-white shadow-sm"
+                  >
                     View All Islamic Series
                     <span className="ml-2">→</span>
                   </Button>

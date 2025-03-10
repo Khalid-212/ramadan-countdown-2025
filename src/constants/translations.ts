@@ -1,4 +1,3 @@
-
 export const translations = {
   en: {
     title: "Countdown to Ramadan 2025",
@@ -8,7 +7,8 @@ export const translations = {
     minutes: "Minutes",
     seconds: "Seconds",
     share: "Share with friends",
-    blessing: "As we await the blessed month of Ramadan 2025, may Allah guide us in our preparation and strengthen our faith.",
+    blessing:
+      "As we await the blessed month of Ramadan 2025, may Allah guide us in our preparation and strengthen our faith.",
     planner: "Ramadan Planner",
     quran: "Quran Khatm",
     nawafil: "Nawafil",
@@ -17,14 +17,14 @@ export const translations = {
     sadaqah: "Sadaqah",
     addActivity: "Add Activity",
     series: "Ramadan Series",
-    playlistsTitle: "Ramadan Playlists",
+    playlistsTitle: "Ramadan Series",
     viewAll: "View All",
     episodes: "Episodes",
     watchNow: "Watch Now",
     back: "Back to Playlists",
     loading: "Loading...",
     playlists: "Playlists", // Added the missing key
-    
+
     // Series translation keys
     errorLoadingPlaylists: "Error loading playlists. Please try again later.",
     noPlaylistsAvailable: "No playlists available at the moment.",
@@ -37,16 +37,19 @@ export const translations = {
     refresh: "Refresh",
     success: "Success",
     episode: "Episode",
-    
+
     // Admin-specific translations
     addNewPlaylist: "Add New Playlist",
-    addYouTubePlaylistDescription: "Enter a YouTube playlist URL to add it to the collection.",
+    addYouTubePlaylistDescription:
+      "Enter a YouTube playlist URL to add it to the collection.",
     youtubePlaylistUrl: "YouTube Playlist URL",
     fetch: "Fetch Details",
     enterPlaylistUrlFirst: "Please enter a YouTube playlist URL first.",
-    invalidPlaylistUrl: "Invalid YouTube playlist URL. Please check and try again.",
+    invalidPlaylistUrl:
+      "Invalid YouTube playlist URL. Please check and try again.",
     playlistDetailsFetched: "Playlist details fetched successfully.",
-    errorFetchingPlaylistDetails: "Error fetching playlist details. Please try again.",
+    errorFetchingPlaylistDetails:
+      "Error fetching playlist details. Please try again.",
     titleAndUrlRequired: "Title and URL are required fields.",
     playlistTitle: "Enter playlist title",
     description: "Description",
@@ -64,14 +67,14 @@ export const translations = {
     noPlaylistsYet: "No playlists added yet.",
     noDescription: "No description provided.",
     view: "View",
-    
+
     // Pagination and other translations
     previousPage: "Previous page",
     nextPage: "Next page",
     page: "Page",
     of: "of",
     showMore: "Show More",
-    showLess: "Show Less"
+    showLess: "Show Less",
   },
   am: {
     title: "የ2025 ረመዳን ወር የቀሩ ቀናት",
@@ -97,7 +100,7 @@ export const translations = {
     back: "ወደ ዝርዝሮች ይመለሱ",
     loading: "በመጫን ላይ...",
     playlists: "ዝርዝሮች", // Added the missing key
-    
+
     // Series translation keys
     errorLoadingPlaylists: "ዝርዝሮችን በመጫን ላይ ስህተት ተፈጥሯል። እባክዎ ቆይተው ይሞክሩ።",
     noPlaylistsAvailable: "በአሁኑ ጊዜ ምንም ዝርዝሮች የሉም።",
@@ -110,7 +113,7 @@ export const translations = {
     refresh: "አድስ",
     success: "ተሳክቷል",
     episode: "ክፍል",
-    
+
     // Admin-specific translations
     addNewPlaylist: "አዲስ ዝርዝር ጨምር",
     addYouTubePlaylistDescription: "ወደ ስብስቡ ለመጨመር የዩቲዩብ ዝርዝር ዩአርኤል ያስገቡ።",
@@ -119,7 +122,8 @@ export const translations = {
     enterPlaylistUrlFirst: "እባክዎ መጀመሪያ የዩቲዩብ ዝርዝር ዩአርኤል ያስገቡ።",
     invalidPlaylistUrl: "ልክ ያልሆነ የዩቲዩብ ዝርዝር ዩአርኤል። እባክዎ ያረጋግጡ እና እንደገና ይሞክሩ።",
     playlistDetailsFetched: "የዝርዝር ዝርዝሮች በተሳካ ሁኔታ ተመልሰዋል።",
-    errorFetchingPlaylistDetails: "የዝርዝር ዝርዝሮችን በማምጣት ላይ ስህተት ተፈጥሯል። እባክዎ እንደገና ይሞክሩ።",
+    errorFetchingPlaylistDetails:
+      "የዝርዝር ዝርዝሮችን በማምጣት ላይ ስህተት ተፈጥሯል። እባክዎ እንደገና ይሞክሩ።",
     titleAndUrlRequired: "ርዕስ እና ዩአርኤል የሚያስፈልጉ ናቸው።",
     playlistTitle: "የዝርዝር ርዕስ ያስገቡ",
     description: "መግለጫ",
@@ -137,14 +141,14 @@ export const translations = {
     noPlaylistsYet: "እስካሁን ምንም ዝርዝሮች አልተጨመሩም።",
     noDescription: "ምንም መግለጫ አልተሰጠም።",
     view: "እይ",
-    
+
     // Pagination and other translations
     previousPage: "ቀዳሚ ገጽ",
     nextPage: "ቀጣይ ገጽ",
     page: "ገጽ",
     of: "ከ",
     showMore: "ተጨማሪ አሳይ",
-    showLess: "ትንሽ አሳይ"
+    showLess: "ትንሽ አሳይ",
   },
 };
 
