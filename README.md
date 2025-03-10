@@ -33,7 +33,7 @@ A modern web application built with React and Vite to countdown to Ramadan 2025.
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/ramadan-countdown-2025.git
+   git clone https://github.com/khalid-212/ramadan-countdown-2025.git
    cd ramadan-countdown-2025
    ```
 
